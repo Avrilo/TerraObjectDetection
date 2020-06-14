@@ -55,19 +55,11 @@ class appearance():
         # Tensorflow graph used for loading a model should be the same as we use for object detection in AIMain function.
         global graph
         graph = tf.get_default_graph()
-        #print("Model loaded : " + str(threading.get_ident()))
 
         if 'label_loading' in dir(self):
             self.label_loading.destroy()
 
     def program_start(self):
-
-        #print("\033[95m Program is Starting - ident : " + str(threading.get_ident()))
-
-        '''Cameras list:    http://131.173.8.23/mjpg/video.mjpg - Germany
-                        http://158.58.130.148/mjpg/video.mjpg - Sochi
-                        http://213.240.24.26/mjpg/video.mjpg - Belgrade, Serbia #stream works with cv2.CAP_FFMPEG
-                        https://pypi.org/project/vidgear/'''
 
         # Getting VISUAL information from DB
         _sqlite.getVisual()
@@ -75,7 +67,6 @@ class appearance():
             self.schemename = row[1]
             self.transparency = row[2]
             self.bgcolor = row[3]
-        #print("Transparency: " + self.transparency + " Background color: " + self.bgcolor)
 
         # Root window
         self.root = tk.Tk()
