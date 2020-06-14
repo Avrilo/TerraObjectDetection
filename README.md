@@ -25,19 +25,19 @@ An application uses YOLOv3 and TinyYOLOv3 models for object detection.
 ### Installation
 
 1. Install ImageAI 2.1.5 and all necessary dependencies
-ImageAI:
+- ImageAI:
 ```
 pip3 install imageai --upgrade
 ```
-Tensorflow:
+- Tensorflow:
 ```
 pip3 install tensorflow==1.11.0
 ```
-OpenCV:
+- OpenCV:
 ```
 pip3 install opencv-python
 ```
-Keras:
+- Keras:
 ```
 pip3 install keras
 ```
